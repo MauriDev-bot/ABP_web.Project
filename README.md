@@ -47,7 +47,6 @@ Un robot autónomo e innovador que combina:
 ### Frontend
 - **HTML5**: Estructura semántica de las páginas
 - **CSS3**: Estilos visuales y diseño responsivo
-- **JavaScript**: Interactividad (si aplica en canvas.html)
 
 ### Base de Datos
 - Almacenamiento de datos de componentes y precios
@@ -529,7 +528,7 @@ $resultadoComponentes = $conexion->query($consultaComponentes);
 **Proyecto:** EMERGENCYMESH  
 **Institución:** Liceo Politécnico Andes  
 **Equipo:** 18  
-**Año:** 2024/2025
+**Año:** 2026
 
 ---
 
