@@ -1,957 +1,552 @@
-# Proyecto ABP --- EMERGENCY MESH
-
-## 1. Descripción del proyecto
-
-**EMERGENCY MESH** es un proyecto web desarrollado para el ABP,
-utilizando tecnologías web básicas y una base de datos MySQL.
-
-El proyecto permite presentar información mediante una página web y
-obtener datos almacenados en una base de datos, utilizando **HTML5, CSS,
-PHP y MySQL**.
-
-------------------------------------------------------------------------
-
-## 2. Cómo ejecutar el proyecto
-
-### Forma 1 --- Ejecución local con WampServer
-
-1.  Revisar el archivo `requerimientos.txt`.
-
-2.  Encender o abrir **WampServer**.
-
-3.  Abrir el archivo `datos.sql`.
-
-4.  Copiar y ejecutar el código SQL en MySQL/phpMyAdmin.
-
-5.  Mover la carpeta `Pagina_web` a:
-
-    `C:\wamp64\www`
-
-6.  Abrir el navegador y entrar a:
-
-    `http://localhost`
-
-7.  Redireccionar a:
-
-    `http://localhost/Pagina_web`
-
-8.  Explorar la página web.
-
-9.  Para revisar el código utilizado, se puede abrir las herramientas de
-    desarrollador del navegador con **F12** o mediante la opción
-    **Inspeccionar**.
-
-### Forma 2 --- Ejecución mediante sitio web
-
-1.  Visitar el sitio:
-
-    `mauri-dev.com`
-
-2.  Explorar la página web.
-
-3.  Para revisar el código utilizado, abrir las herramientas de
-    desarrollador con **F12** o mediante **Inspeccionar**.
-
-> **Nota:** La ejecución local requiere tener correctamente configurado
-> WampServer, PHP, MySQL y la base de datos utilizada por el proyecto.
-
-------------------------------------------------------------------------
-
-# 3. Tecnologías utilizadas
-
--   **HTML5:** estructura y contenido de la página.
--   **CSS3:** diseño visual, distribución, colores, tipografías y
-    efectos.
--   **PHP:** procesamiento del lado del servidor y conexión con la base
-    de datos.
--   **MySQL:** almacenamiento y consulta de información.
--   **Google Fonts:** utilización de fuentes externas para el diseño
-    tipográfico.
-
-------------------------------------------------------------------------
-
-# 4. Estructura HTML utilizada
-
-HTML se utiliza para definir la estructura y el contenido de la página
-web.
-
-  -----------------------------------------------------------------------
-  Elemento                            Función
-  ----------------------------------- -----------------------------------
-  `<!DOCTYPE html>`                   Indica que el documento utiliza
-                                      HTML5.
-
-  `<html>`                            Elemento raíz que contiene todo el
-                                      documento HTML.
-
-  `<head>`                            Contiene información y
-                                      configuraciones del documento que
-                                      no se muestran directamente en la
-                                      página.
-
-  `<meta>`                            Define metadatos del documento,
-                                      como la codificación de caracteres
-                                      y la configuración de
-                                      visualización.
-
-  `<link>`                            Permite enlazar recursos externos,
-                                      como hojas de estilos o fuentes.
-
-  `<body>`                            Contiene todo el contenido visible
-                                      de la página.
-
-  `<header>`                          Define el encabezado de la página.
-
-  `<nav>`                             Contiene la barra o menú de
-                                      navegación.
-
-  `<section>`                         Permite dividir la página en
-                                      diferentes secciones.
-
-  `<div>`                             Contenedor genérico utilizado para
-                                      organizar elementos.
-
-  `<footer>`                          Define el pie de página.
-
-  `<a>`                               Crea enlaces para navegar hacia
-                                      otras páginas o secciones.
-
-  `<img>`                             Permite insertar imágenes.
-
-  `<p>`                               Define párrafos de texto.
-
-  `<h1>`                              Define un título principal o
-                                      encabezado de nivel 1.
-
-  `<table>`                           Define una tabla.
-
-  `<thead>`                           Define el encabezado de una tabla.
-
-  `<tr>`                              Define una fila de una tabla.
-
-  `<th>`                              Define una celda de encabezado.
-
-  `<td>`                              Define una celda normal de una
-                                      tabla.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# 5. PHP
-
-PHP se utiliza para ejecutar código del lado del servidor, conectarse
-con MySQL y mostrar información obtenida desde la base de datos.
-
-## Estructuras y funciones utilizadas
-
-  -----------------------------------------------------------------------
-  Elemento                            Función
-  ----------------------------------- -----------------------------------
-  `<?php`                             Indica el inicio de un bloque de
-                                      código PHP.
-
-  `?>`                                Indica el cierre de un bloque PHP.
-
-  `mysqli_connect()`                  Permite establecer una conexión con
-                                      una base de datos MySQL.
-
-  `include`                           Incluye otro archivo PHP dentro del
-                                      archivo actual.
-
-  `$variable`                         Sintaxis utilizada para declarar y
-                                      utilizar variables en PHP.
-
-  `if (condición)`                    Ejecuta un bloque de código cuando
-                                      se cumple una condición.
-
-  `!`                                 Operador lógico de negación.
-
-  `$conexion->query()`                Ejecuta una consulta SQL mediante
-                                      la conexión establecida.
-
-  `echo`                              Muestra contenido en la salida de
-                                      PHP.
-
-  `foreach`                           Recorre los elementos de una
-                                      colección o resultado.
-
-  `htmlspecialchars()`                Convierte caracteres especiales en
-                                      entidades HTML para mostrar texto
-                                      de forma segura.
-
-  `endforeach`                        Indica el final de un bloque
-                                      `foreach` cuando se utiliza la
-                                      sintaxis alternativa de PHP.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# 6. `conexion.php`
-
-El archivo `conexion.php` establece la conexión entre PHP y la base de
-datos MySQL.
-
-``` php
+# 🤖 EMERGENCYMESH - Robot de Emergencia e Innovación
+
+> **Proyecto educativo** del Liceo Politécnico Andes | Equipo: 18
+
+---
+
+## 📋 Contenido
+
+1. [Descripción del Proyecto](#descripción-del-proyecto)
+2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+3. [Estructura del Proyecto](#estructura-del-proyecto)
+4. [Requisitos Previos](#requisitos-previos)
+5. [Instalación](#instalación)
+6. [Cómo Ejecutar](#cómo-ejecutar)
+7. [Funcionalidades](#funcionalidades)
+8. [Base de Datos](#base-de-datos)
+9. [Archivos Principales](#archivos-principales)
+10. [Contribuciones](#contribuciones)
+
+---
+
+## 📝 Descripción del Proyecto
+
+**EMERGENCYMESH** es un proyecto educativo que presenta un **robot de emergencia multifuncional** diseñado como solución innovadora para situaciones de desastre y emergencia.
+
+### Objetivo Principal
+- Documentar y presentar un robot versátil capaz de responder a diferentes tipos de emergencias
+- Aplicar conocimientos de **Telecomunicaciones**, **Electrónica** y **Mecánica**
+- Desarrollar una plataforma web interactiva para visualizar toda la información técnica
+
+### ¿Qué es EmergencyBot?
+Un robot autónomo e innovador que combina:
+- 🔧 **Sistemas mecánicos** avanzados (orugas, suspensiones, estabilizadores)
+- ⚡ **Componentes electrónicos** de última generación (ESP32, sensores, drivers)
+- 📡 **Conectividad** 4G, LoRa y Ethernet
+- 🔋 **Energía limpia**: Baterías LiFePO4 + paneles solares
+- 📊 **Sensores**: GPS, ultrasónicos, temperatura, gases, cámara
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+### Backend
+- **PHP 7.x+**: Lenguaje de programación del servidor
+- **MySQL/MariaDB**: Base de datos relacional para almacenar información de componentes
+
+### Frontend
+- **HTML5**: Estructura semántica de las páginas
+- **CSS3**: Estilos visuales y diseño responsivo
+- **JavaScript**: Interactividad (si aplica en canvas.html)
+
+### Base de Datos
+- Almacenamiento de datos de componentes y precios
+- Gestión de información del robot
+- Consultas SQL para obtener datos dinámicos
+
+### Servidor Web
+- **Apache** (incluido en WAMP)
+- **WAMP Stack**: Windows + Apache + MySQL + PHP
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+pagina_abp/
+├── 📄 README.md                      ← Este archivo
+├── 📄 index.php                      ← Página principal (inicio)
+├── 📄 infografia.html                ← Sección de infografía
+├── 📄 canvas.html                    ← Canvas interactivo
+├── 📄 Telecomunicaciones.html        ← Información telecomunicaciones
+├── 📄 electronica.html               ← Componentes electrónicos
+├── 📄 mecanica.html                  ← Sistemas mecánicos
+├── 📄 conexion.php                   ← Configuración de conexión a BD
+├── 📄 datos.sql                      ← Script SQL inicial
+├── 📄 estilo1.css                    ← Estilos generales del sitio
+├── 📁 recursos/
+│   ├── robot.avif                    ← Imagen del robot
+│   ├── lpa.jpg                       ← Logo Liceo Politécnico Andes
+│   └── favicon.ico                   ← Ícono del sitio (favicon)
+```
+
+### Explicación de cada carpeta:
+
+| Carpeta/Archivo | Propósito |
+|---|---|
+| **index.php** | Página principal que carga datos de la BD y muestra el inicio |
+| **infografia.html** | Infografía visual del robot y sus componentes |
+| **canvas.html** | Elemento canvas para interacción visual (puede incluir diagramas) |
+| **Telecomunicaciones.html** | Detalle de sistemas de comunicación (4G, LoRa, Ethernet) |
+| **electronica.html** | Especificaciones de componentes electrónicos |
+| **mecanica.html** | Información de sistemas mecánicos (orugas, suspensiones) |
+| **conexion.php** | Archivo que establece conexión con MySQL |
+| **datos.sql** | Script con estructura de BD y datos iniciales |
+| **estilo1.css** | Hoja de estilos CSS centralizada |
+| **recursos/** | Carpeta con imágenes y recursos multimedia |
+
+---
+
+## 📦 Requisitos Previos
+
+Antes de iniciar, necesitas tener instalados:
+
+### Software Obligatorio
+- ✅ **WAMP Stack** (Windows Apache MySQL PHP)
+  - Descarga desde: https://www.wampserver.com/
+  - O alternativamente: XAMPP, Laragon, etc.
+
+- ✅ **Servidor Apache** activo
+- ✅ **MySQL** ejecutándose
+- ✅ **PHP 7.x o superior**
+
+### Navegador Web
+- ✅ Chrome, Firefox, Edge o cualquier navegador moderno
+- ✅ JavaScript habilitado
+
+### Verificación de Requisitos
+```bash
+# Abre una terminal/CMD y ejecuta:
+php -v              # Verifica versión de PHP
+mysql -u root -p    # Verifica MySQL (te pedirá contraseña)
+```
+
+---
+
+## 📥 Instalación
+
+### Paso 1: Copiar archivos al servidor
+```bash
+# Copia toda la carpeta "pagina_abp" a la carpeta WWW de WAMP
+Ubicación: C:\wamp64\www\pagina_abp\
+```
+
+### Paso 2: Crear la base de datos
+```bash
+# Opción A: Usando phpMyAdmin (GUI)
+1. Abre http://localhost/phpmyadmin/
+2. Ve a "SQL" en la parte superior
+3. Copia todo el contenido de datos.sql
+4. Pégalo en la ventana de SQL y haz clic en "Ejecutar"
+
+# Opción B: Usando MySQL desde CMD
+1. Abre CMD
+2. mysql -u root -p
+3. Copia y pega el contenido completo de datos.sql
+```
+
+### Paso 3: Configurar conexión (si es necesario)
+Edita **conexion.php** si tus credenciales son diferentes:
+
+```php
 <?php
+$host = "localhost";      // Servidor (generalmente localhost)
+$user = "root";           // Usuario MySQL (por defecto: root)
+$pass = "";               // Contraseña (por defecto vacía en WAMP)
+$db = "robot";            // Nombre de la base de datos
+?>
+```
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "robot";
+### Paso 4: Verificar permisos
+Asegúrate de que la carpeta tiene permisos de lectura/escritura:
+```bash
+# En Windows, generalmente es automático
+# Si tienes problemas, haz clic derecho > Propiedades > Seguridad
+```
 
+---
+
+## 🚀 Cómo Ejecutar
+
+### Método 1: Abrir en el navegador (Más común)
+```
+1. Inicia WAMP (haz clic en el ícono en la bandeja)
+2. Asegúrate de que Apache y MySQL estén en verde (activos)
+3. Abre tu navegador web
+4. Escribe en la barra de direcciones:
+   
+   http://localhost/pagina_abp/
+   
+5. ¡Listo! Deberías ver la página principal
+```
+
+### Método 2: Desde VS Code (Si tienes Live Server)
+```
+1. Abre la carpeta en VS Code
+2. Haz clic derecho en index.php
+3. Selecciona "Open with Live Server"
+⚠️ Nota: Esto solo funciona para archivos HTML puros
+```
+
+---
+
+## ✨ Funcionalidades
+
+### 🏠 Página Principal (index.php)
+- **Presentación del proyecto** con diseño atractivo
+- **Conexión a la base de datos** que carga datos dinámicamente
+- **Tabla de componentes** con información de:
+  - Nombre del componente
+  - Cantidad
+  - Precio neto
+  - IVA (Impuesto al Valor Agregado)
+  - Precio de venta
+  - Subtotal
+
+### 📊 Secciones Disponibles
+- **Infografía**: Visualización gráfica del robot y sus sistemas
+- **Canvas**: Elementos interactivos (diagramas, animaciones)
+- **Telecomunicaciones**: Sistema de comunicación (4G, LoRa, WiFi)
+- **Electrónica**: Componentes y sistemas de control
+- **Mecánica**: Estructura y sistemas de movimiento
+
+### 🎨 Características de Diseño
+- Diseño **responsivo** (adapta a dispositivos móviles)
+- Paleta de colores profesional
+- Navegación intuitiva entre secciones
+- Imágenes optimizadas (formato .avif)
+- Favicon personalizado
+
+---
+
+## 🗄️ Base de Datos
+
+### Estructura de BD: `robot`
+
+#### Tabla 1: `robot`
+Información general del robot principal.
+
+```sql
+CREATE TABLE robot (
+    nombre VARCHAR(20) NOT NULL,    -- Nombre del robot
+    precio INT NOT NULL             -- Precio total
+);
+```
+
+**Datos en la tabla:**
+| nombre | precio |
+|---|---|
+| EmergencyBot | 1151601 |
+
+#### Tabla 2: `componentes`
+Detalle de todos los componentes del robot.
+
+```sql
+CREATE TABLE componentes (
+    nombre VARCHAR(60) NOT NULL,    -- Nombre del componente
+    cantidad INT NOT NULL,          -- Cantidad utilizada
+    precio_n INT NOT NULL,          -- Precio neto unitario
+    iva INT NOT NULL,               -- Impuesto calculado
+    precio_v INT NOT NULL,          -- Precio de venta
+    subtotal INT NOT NULL           -- Subtotal (cantidad × precio_v)
+);
+```
+
+### Categorías de Componentes en la BD
+
+#### 🚗 Sistema de Movimiento (Mecánica)
+- Motorreductores DC
+- Orugas de caucho reforzado
+- Ruedas motrices
+- Rodamientos
+- Suspensiones y amortiguadores
+- Chasis de aluminio
+
+#### ⚡ Sistema Eléctrico
+- Batería LiFePO4 25.6V / 50Ah
+- Cargadores solares
+- Paneles solares monocristalinos
+- Convertidores DC-DC
+- Drivers de motor BTS7960
+- Fusibles y interruptores
+
+#### 📡 Sistema de Comunicación
+- Router 4G Teltonika RUT200
+- Módulo LoRa EBYTE E22-900T30D
+- Switch Ethernet industrial
+- Gateway (Raspberry Pi 4)
+- Antenas especializadas
+
+#### 📊 Sistema de Sensores
+- ESP32 DevKit V1 (controlador principal)
+- GPS u-blox NEO-6M
+- Sensores ultrasónicos HC-SR04
+- Acelerómetro/Giroscopio MPU6050
+- Sensor barométrico BME280
+- Sensores de gases (MQ-2, MQ-135)
+- Monitor de corriente INA219
+- Encoder incremental
+
+#### 📸 Sistema de Percepción
+- Cámara ESP32-CAM
+- Actuadores visuales (LEDs, sirena, buzzer)
+
+### Consultas útiles en la BD
+
+```php
+// Obtener todos los componentes
+$consulta = "SELECT nombre, cantidad, precio_n, iva, precio_v, subtotal FROM componentes";
+
+// Obtener el precio total del robot
+$consulta = "SELECT precio FROM robot WHERE nombre='EmergencyBot'";
+
+// Obtener componentes por categoría (usando LIKE)
+$consulta = "SELECT * FROM componentes WHERE nombre LIKE '%Motor%'";
+
+// Calcular el costo total de componentes
+$consulta = "SELECT SUM(subtotal) as costo_total FROM componentes";
+```
+
+---
+
+## 📄 Archivos Principales Explicados
+
+### 1️⃣ **index.php** - La Página Principal
+
+Este archivo es el corazón del sitio. Hace lo siguiente:
+
+```php
+<?php
+// Incluye la conexión a la base de datos
+include 'conexion.php';
+
+// Realiza una consulta para obtener todos los componentes
+$consulta = "SELECT nombre, cantidad, precio_n, iva, precio_v, subtotal FROM componentes";
+
+// Ejecuta la consulta
+$componentes = $conexion->query($consulta);
+?>
+```
+
+**Lo que ves en la página:**
+- Header con título "EMERGENCYMESH"
+- Menú de navegación a todas las secciones
+- Sección de bienvenida con título atractivo
+- Tabla dinámica de componentes cargada desde BD
+
+### 2️⃣ **conexion.php** - Conexión a la Base de Datos
+
+Este archivo es esencial para toda comunicación con MySQL:
+
+```php
+<?php
+$host = "localhost";      // Donde está el servidor MySQL
+$user = "root";           // Usuario de MySQL
+$pass = "";               // Contraseña (vacía por defecto en WAMP)
+$db = "robot";            // Nombre de la base de datos
+
+// Crea la conexión
 $conexion = mysqli_connect($host, $user, $pass, $db);
 
+// Verifica si la conexión fue exitosa
 if (!$conexion) {
     echo("No se ha podido realizar la conexión");
 }
-
 ?>
 ```
 
-## Explicación
+**Importancia:** Se incluye en `index.php` con `include 'conexion.php';`
 
--   `$host = "localhost";` define el servidor donde se encuentra MySQL.
--   `$user = "root";` define el usuario utilizado para conectarse.
--   `$pass = "";` define la contraseña del usuario.
--   `$db = "robot";` indica el nombre de la base de datos.
--   `mysqli_connect()` utiliza estos datos para establecer la conexión.
--   `if (!$conexion)` comprueba si la conexión no se realizó
-    correctamente.
--   `echo()` muestra un mensaje en caso de error.
+### 3️⃣ **estilo1.css** - Hojas de Estilo
 
-> En un entorno real, no se recomienda dejar credenciales de base de
-> datos expuestas en el código ni utilizar el usuario `root` para una
-> aplicación en producción.
+Define el aspecto visual de todo el sitio:
 
-------------------------------------------------------------------------
-
-# 7. `index.php`
-
-El archivo `index.php` utiliza la conexión creada anteriormente para
-realizar una consulta a la base de datos.
-
-## Conexión y consulta
-
-``` php
-<?php
-
-include 'conexion.php';
-
-$consulta = "SELECT nombre, precio FROM componentes";
-$componentes = $conexion->query($consulta);
-
-?>
-```
-
-## Explicación
-
-### `include 'conexion.php';`
-
-Importa el archivo `conexion.php`, permitiendo utilizar la conexión
-almacenada en `$conexion`.
-
-### `$consulta`
-
-``` php
-$consulta = "SELECT nombre, precio FROM componentes";
-```
-
-Guarda en una variable una consulta SQL que solicita las columnas
-`nombre` y `precio` de la tabla `componentes`.
-
-### `$componentes`
-
-``` php
-$componentes = $conexion->query($consulta);
-```
-
-Ejecuta la consulta SQL y almacena el resultado.
-
-------------------------------------------------------------------------
-
-# 8. Mostrar los componentes
-
-Para mostrar los resultados obtenidos desde MySQL se utiliza un ciclo
-`foreach`.
-
-``` php
-<?php foreach ($componentes as $componente): ?>
-<tr>
-    <td><?= htmlspecialchars($componente['nombre']) ?></td>
-    <td>$<?= htmlspecialchars($componente['precio']) ?></td>
-</tr>
-<?php endforeach; ?>
-```
-
-## Explicación
-
--   `foreach` recorre cada componente obtenido desde la base de datos.
--   `$componente['nombre']` obtiene el nombre del componente actual.
--   `$componente['precio']` obtiene el precio del componente actual.
--   `<?= ... ?>` es una forma abreviada de utilizar `echo`.
--   `htmlspecialchars()` convierte caracteres especiales para que el
-    contenido pueda mostrarse correctamente en HTML y reducir riesgos al
-    imprimir datos provenientes de fuentes externas.
--   `<tr>` crea una fila de la tabla.
--   `<td>` crea las celdas donde se muestran el nombre y el precio.
--   `endforeach` indica el final del ciclo.
-
-------------------------------------------------------------------------
-
-# 9. CSS
-
-CSS se utiliza para definir la apariencia visual de la página,
-incluyendo colores, tamaños, espacios, distribución de elementos, bordes
-y efectos.
-
-## Estructuras utilizadas
-
-  -----------------------------------------------------------------------
-  Elemento                            Función
-  ----------------------------------- -----------------------------------
-  `@import`                           Importa recursos externos, en este
-                                      caso fuentes de Google Fonts.
-
-  `*`                                 Selector universal que permite
-                                      aplicar estilos generales a todos
-                                      los elementos.
-
-  `:hover`                            Pseudoclase que permite cambiar el
-                                      estilo de un elemento cuando el
-                                      cursor pasa sobre él.
-
-  `.clase`                            Selector utilizado para aplicar
-                                      estilos a elementos que poseen una
-                                      determinada clase.
-
-  `elemento`                          Selector que permite aplicar
-                                      estilos directamente a un tipo de
-                                      elemento HTML.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# 10. Fuentes externas
-
-El proyecto utiliza **Google Fonts** mediante `@import`.
-
-Las fuentes incluidas son:
-
--   **Bitcount Grid Double Ink**
--   **DM Sans**
--   **Geist**
--   **Silkscreen**
-
-El código utilizado es:
-
-``` css
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap');
-```
-
-------------------------------------------------------------------------
-
-# 11. Configuración general del CSS
-
-``` css
+```css
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;        /* Modelo de caja CSS moderno */
+    font-family: 'Arial', cursive;
 }
-```
 
-El selector universal `*` establece valores generales para los elementos
-de la página:
-
--   `margin: 0;` elimina los márgenes predeterminados.
--   `padding: 0;` elimina los espacios internos predeterminados.
--   `box-sizing: border-box;` hace que el ancho y alto de los elementos
-    incluyan su contenido, padding y borde.
--   `font-family` establece **DM Sans** como fuente principal.
-
-------------------------------------------------------------------------
-
-# 12. Fondo y texto
-
-``` css
 body {
-    background-color: #0b1718;
+    background-color: #0b1718;     /* Fondo oscuro futurista */
 }
 
-.fuente_pequeña {
-    font-size: 16px;
-    color: aliceblue;
-}
-```
-
--   `body` establece un fondo oscuro para toda la página.
--   `.fuente_pequeña` define un tamaño de texto de `16px` y un color
-    claro.
-
-------------------------------------------------------------------------
-
-# 13. Encabezado
-
-``` css
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 120px;
-    min-height: 160px;
-    padding: 20px 40px;
-    color: aqua;
+.tarjeta {
+    background-color: #122425;     /* Tarjetas con fondo oscuro */
     font-size: 30px;
+    color: #a7f3d0;                /* Texto verde menta */
+    height: 330px;
+    width: 800px;
+    border-radius: 10px;           /* Esquinas redondeadas */
 }
 ```
 
-El encabezado utiliza **Flexbox** para distribuir sus elementos.
+**Paleta de colores:**
+- 🌑 Fondo: #0b1718 (Gris muy oscuro/casi negro)
+- 🟦 Elementos: #122425 (Azul oscuro)
+- 🟢 Texto principal: #a7f3d0 (Verde menta)
 
--   `display: flex;` activa Flexbox.
--   `justify-content: center;` centra los elementos horizontalmente.
--   `align-items: center;` los centra verticalmente.
--   `gap: 120px;` establece separación entre elementos.
--   `min-height: 160px;` define una altura mínima.
--   `padding` agrega espacio interior.
--   `color: aqua;` establece el color del texto.
--   `font-size: 30px;` establece el tamaño de la fuente.
+### 4️⃣ **datos.sql** - Script de Base de Datos
 
-------------------------------------------------------------------------
+Contiene:
+- ✅ Creación de la base de datos `robot`
+- ✅ Creación de tablas `robot` y `componentes`
+- ✅ Inserción de 74 componentes detallados
+- ✅ Información de precios con IVA
 
-# 14. Logo
+**Costo total del robot:** $1,151,601 CLP (aprox.)
 
-``` css
-.logo {
-    max-width: 120px;
-    border-radius: 50%;
-}
+### 5️⃣ **Archivos HTML Complementarios**
+
+Cada archivo tiene estructura similar:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMERGENCYMESH - [Sección]</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <!-- Encabezado y navegación -->
+    <!-- Contenido específico de cada sección -->
+</body>
+</html>
 ```
 
--   `max-width` limita el ancho máximo del logo.
--   `border-radius: 50%` permite darle una forma circular.
+---
 
-------------------------------------------------------------------------
+## 🤝 Contribuciones
 
-# 15. Barra de navegación
+### Cómo contribuir al proyecto
 
-``` css
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    min-height: 40px;
-    padding: 8px 24px;
-    background-color: #a7f3d0;
-}
-
-nav a {
-    color: #122425;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: azure;
-}
+#### 1. Reportar problemas
+```
+Si encuentras un error:
+1. Anota exactamente qué pasó
+2. Describe los pasos para reproducirlo
+3. Comunica al equipo
 ```
 
-La barra de navegación utiliza Flexbox para centrar y separar sus
-enlaces.
+#### 2. Sugerir mejoras
+- Mejor diseño visual
+- Funcionalidades adicionales
+- Optimización de código
+- Documentación mejorada
 
-El selector `nav a` modifica los enlaces dentro del menú y elimina el
-subrayado mediante `text-decoration: none`.
+#### 3. Agregar contenido
+- Nuevas secciones temáticas
+- Más detalles técnicos
+- Galería de imágenes del robot
+- Vídeos de funcionamiento
 
-`nav a:hover` cambia el color de los enlaces cuando el cursor pasa sobre
-ellos.
+#### 4. Mejorar el código
+```php
+// Ejemplo: Mejora de legibilidad en consultas
 
-------------------------------------------------------------------------
+// ❌ Anterior (sin comentarios)
+$c = "SELECT * FROM componentes";
+$r = $conexion->query($c);
 
-# 16. Secciones
-
-``` css
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 600px;
-    padding: 28px 24px;
-    color: white;
-    text-align: center;
-}
+// ✅ Mejorado (con nombres descriptivos y comentarios)
+// Obtiene todos los componentes con sus detalles de precio
+$consultaComponentes = "SELECT nombre, cantidad, precio_n, iva, precio_v, subtotal FROM componentes";
+$resultadoComponentes = $conexion->query($consultaComponentes);
 ```
 
-Las secciones se organizan mediante Flexbox y tienen:
+---
 
--   contenido centrado;
--   una altura mínima de `600px`;
--   espacio interior;
--   texto de color blanco;
--   texto centrado.
+## 🔍 Solución de Problemas
 
-------------------------------------------------------------------------
-
-# 17. Contenedores de contenido
-
-``` css
-.quien,
-.texto,
-.tabla {
-    padding: 20px;
-    background-color: #0b1718;
-    border-radius: 5px;
-}
-```
-
-Estas clases comparten propiedades para crear bloques de contenido con:
+### ❌ "No se puede conectar a la base de datos"
 
--   `padding`;
--   fondo oscuro;
--   bordes redondeados.
-
-------------------------------------------------------------------------
-
-# 18. Sección `.quien`
+**Soluciones:**
+1. Verifica que MySQL esté activo (ícono verde en WAMP)
+2. Revisa que la contraseña en `conexion.php` sea correcta
+3. Asegúrate de que la BD `robot` existe:
+   ```sql
+   SHOW DATABASES;
+   ```
 
-``` css
-.quien {
-    width: 300px;
-}
+### ❌ "Página no encontrada (404)"
 
-.quien h1 {
-    font-size: 80px;
-    line-height: 1;
-}
-
-.quien .acento {
-    font-size: 100px;
-}
-```
+**Soluciones:**
+1. Verifica que Apache esté activo en WAMP
+2. Asegúrate de que copié los archivos en `C:\wamp64\www\pagina_abp\`
+3. Accede a `http://localhost/` para ver si funciona WAMP
 
-La clase `.quien` establece un ancho de `300px`.
+### ❌ "Error de sintaxis en SQL"
 
-Los títulos dentro de esta sección tienen un tamaño grande y el elemento
-con clase `.acento` utiliza un tamaño todavía mayor.
+**Soluciones:**
+1. En phpMyAdmin, copia y pega línea por línea
+2. Asegúrate de no tener caracteres especiales
+3. Verifica las mayúsculas/minúsculas en nombres de BD
 
-------------------------------------------------------------------------
-
-# 19. Sección de inicio
-
-``` css
-.inicio h1 {
-    font-size: 110px;
-    line-height: 1;
-}
-
-.inicio .acento {
-    font-size: 120px;
-}
-
-.inicio p {
-    margin-top: 16px;
-}
-```
+### ⚠️ "Las imágenes no se cargan"
 
-Esta sección utiliza títulos de gran tamaño para destacar el contenido
-principal.
+**Soluciones:**
+1. Verifica que la carpeta `recursos/` existe
+2. Comprueba que los archivos tienen la extensión correcta
+3. Revisa la ruta en el HTML: `<img src="recursos/robot.avif">`
 
-El párrafo posee un margen superior de `16px`.
+---
 
-------------------------------------------------------------------------
+## 📚 Recursos de Aprendizaje
 
-# 20. Fila de contenido
+### PHP y MySQL
+- 📖 [PHP Official Documentation](https://www.php.net/manual/es/)
+- 📖 [MySQL Tutorial W3Schools](https://www.w3schools.com/sql/)
 
-``` css
-.fila {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 420px;
-    gap: 80px;
-    width: 90%;
-}
-```
-
-`.fila` organiza los elementos horizontalmente utilizando Flexbox y
-mantiene una separación de `80px` entre ellos.
-
-------------------------------------------------------------------------
-
-# 21. Tarjeta bordeada
-
-``` css
-.tarjeta_bordeada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 420px;
-    gap: 80px;
-    width: 90%;
-    border: 3px solid aqua;
-    border-radius: 10px;
-    background-color: #122425;
-}
-```
-
-Esta clase crea una tarjeta con:
-
--   borde de `3px`;
--   color aqua;
--   esquinas redondeadas;
--   fondo oscuro;
--   contenido centrado mediante Flexbox.
-
-También se define el estilo del texto contenido dentro de la tarjeta:
-
-``` css
-.tarjeta_bordeada .texto {
-    background-color: #122425;
-    width: 600px;
-}
-```
-
-------------------------------------------------------------------------
-
-# 22. Colores de acento
-
-``` css
-.acento,
-.marca,
-.titulo {
-    color: aqua;
-}
-```
-
-Estas clases utilizan el color **aqua** para destacar elementos
-importantes de la interfaz.
-
-------------------------------------------------------------------------
-
-# 23. Texto
-
-``` css
-.texto {
-    width: 400px;
-    min-height: 260px;
-    font-size: 25px;
-    line-height: 1.2;
-}
-
-.marca {
-    font-size: 105%;
-}
-```
-
-`.texto` establece un ancho de `400px`, una altura mínima de `260px` y
-un tamaño de fuente de `25px`.
-
-`line-height: 1.2` controla la separación vertical entre líneas.
-
-------------------------------------------------------------------------
+### HTML y CSS
+- 📖 [MDN Web Docs](https://developer.mozilla.org/es/)
+- 📖 [CSS-Tricks](https://css-tricks.com/)
 
-# 24. Tabla
-
-``` css
-.tabla {
-    width: 900px;
-    max-width: 100%;
-    min-height: 480px;
-}
-
-.titulo {
-    margin-bottom: 12px;
-    font-size: 60px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 20px;
-    background-color: #122425;
-    color: #00eaff;
-}
-```
-
-La clase `.tabla` define el contenedor de la tabla.
-
--   `width: 900px` establece un ancho máximo previsto.
--   `max-width: 100%` evita que el elemento supere el ancho disponible.
--   `min-height: 480px` establece una altura mínima.
-
-En la tabla:
-
--   `width: 100%` utiliza todo el ancho disponible.
--   `border-collapse: collapse` une los bordes de las celdas.
--   `background-color` establece el fondo.
--   `color` establece el color del contenido.
+### Robotics y Electrónica
+- 📖 [Arduino Official](https://www.arduino.cc/)
+- 📖 [Raspberry Pi Foundation](https://www.raspberrypi.org/)
 
-### Celdas
+---
 
-``` css
-th,
-td {
-    padding: 8px;
-    border: 2px solid #0d1819;
-    text-align: center;
-}
+## 📊 Estadísticas del Proyecto
 
-th {
-    color: #c6c7c7;
-    background-color: #0d1819;
-}
-```
+| Métrica | Valor |
+|---|---|
+| **Total de archivos** | 10 |
+| **Líneas de código aprox.** | 2,000+ |
+| **Componentes en BD** | 74 |
+| **Costo total robot** | $1,151,601 CLP |
+| **Secciones del sitio** | 6 |
+| **Tecnologías usadas** | 4 (PHP, MySQL, HTML5, CSS3) |
+| **Base de datos** | 2 tablas |
 
-`th` y `td` reciben espacio interior, bordes y alineación centrada.
+---
 
-`th` tiene un fondo más oscuro para diferenciar los encabezados.
+## 📞 Información de Contacto
 
-------------------------------------------------------------------------
+**Proyecto:** EMERGENCYMESH  
+**Institución:** Liceo Politécnico Andes  
+**Equipo:** 18  
+**Año:** 2024/2025
 
-# 25. Sección de servicios
+---
 
-``` css
-.servicio {
-    flex-direction: column;
-    gap: 24px;
-}
+## 📝 Notas Finales
 
-.servicio h1 {
-    font-size: 60px;
-    line-height: 1;
-}
-```
+Este proyecto es una **iniciativa educativa** que demuestra:
+- ✅ Integración de tecnologías web modernas
+- ✅ Gestión de bases de datos relacionales
+- ✅ Diseño web responsivo
+- ✅ Trabajo en equipo multidisciplinario
+- ✅ Documentación técnica clara
 
-`.servicio` cambia la dirección de los elementos de Flexbox a columna y
-establece una separación de `24px`.
+**Recordatorio importante:**
+> "La tecnología es una herramienta. Su uso depende de nosotros." - Equipo EMERGENCYMESH
 
-El título utiliza un tamaño de `60px`.
+---
 
-------------------------------------------------------------------------
-
-# 26. Elemento robot
-
-``` css
-.robot {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: rgb(0, 241, 253);
-}
-```
-
-La clase `.robot` crea un elemento de `300px × 300px`.
-
-`border-radius: 50%` hace que el elemento sea circular.
-
-------------------------------------------------------------------------
-
-# 27. Pie de página
-
-``` css
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 120px;
-    min-height: 90px;
-    padding: 16px 24px;
-    background-color: #122425;
-    color: white;
-}
-
-footer div {
-    display: grid;
-    gap: 4px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-```
-
-El `footer` utiliza Flexbox para distribuir su contenido.
-
-Los elementos `div` internos utilizan CSS Grid para organizar su
-contenido verticalmente.
-
-Los enlaces del pie de página tienen color blanco y no poseen subrayado.
-
-------------------------------------------------------------------------
-
-# 28. Conceptos de CSS utilizados
-
-El proyecto aplica varios conceptos importantes de CSS:
-
-### Flexbox
-
-Se utiliza principalmente para distribuir y centrar elementos:
-
-``` css
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 80px;
-```
-
-### CSS Grid
-
-Se utiliza dentro del pie de página:
-
-``` css
-display: grid;
-gap: 4px;
-```
-
-### Selectores de clase
-
-Permiten aplicar estilos específicos:
-
-``` css
-.texto { ... }
-.robot { ... }
-.titulo { ... }
-```
-
-### Pseudoclase `:hover`
-
-Permite modificar un elemento cuando el cursor se encuentra sobre él:
-
-``` css
-nav a:hover {
-    color: azure;
-}
-```
-
-### Box Model
-
-El proyecto utiliza propiedades como:
-
--   `margin`
--   `padding`
--   `border`
--   `width`
--   `height`
--   `box-sizing`
-
-Estas propiedades controlan el tamaño y distribución de los elementos.
-
-------------------------------------------------------------------------
-
-# 29. Flujo general del proyecto
-
-El funcionamiento básico del proyecto puede resumirse de la siguiente
-manera:
-
-``` text
-Usuario
-   ↓
-Navegador
-   ↓
-index.php
-   ↓
-include → conexion.php
-   ↓
-PHP conecta con MySQL
-   ↓
-Consulta SQL
-   ↓
-Tabla "componentes"
-   ↓
-Resultado almacenado en $componentes
-   ↓
-foreach recorre los resultados
-   ↓
-HTML muestra nombre y precio
-   ↓
-CSS aplica el diseño visual
-```
-
-------------------------------------------------------------------------
-
-# 30. Base de datos
-
-La aplicación utiliza una base de datos llamada:
-
-``` text
-robot
-```
-
-Dentro de ella se utiliza la tabla:
-
-``` text
-componentes
-```
-
-La consulta principal utilizada por `index.php` es:
-
-``` sql
-SELECT nombre, precio FROM componentes;
-```
-
-Esta consulta obtiene el **nombre** y el **precio** de los componentes
-almacenados.
-
-------------------------------------------------------------------------
-
-# 31. Requisitos
-
-Para ejecutar el proyecto localmente se necesita:
-
--   WampServer.
--   Apache.
--   MySQL.
--   PHP.
--   Un navegador web.
--   Los archivos del proyecto.
--   El archivo `datos.sql`.
--   El archivo `requerimientos.txt`.
-
-------------------------------------------------------------------------
-
-# 32. Estructura recomendada del proyecto
-
-Una estructura básica del proyecto puede ser:
-
-``` text
-Pagina_web/
-├── index.php
-├── conexion.php
-├── datos.sql
-├── requerimientos.txt
-├── css/
-│   └── estilo.css
-├── img/
-│   └── ...
-└── ...
-```
-
-Los nombres exactos de carpetas y archivos pueden variar según la
-estructura original del proyecto.
-
-------------------------------------------------------------------------
-
-# 33. Resumen
-
-**EMERGENCY MESH** utiliza una arquitectura web sencilla basada en PHP y
-MySQL.
-
-HTML5 se encarga de la estructura, CSS del diseño visual, PHP del
-procesamiento y conexión con la base de datos, y MySQL del
-almacenamiento de información.
-
-La página obtiene los componentes mediante una consulta SQL y los
-muestra dinámicamente en una tabla HTML utilizando un ciclo `foreach`.
-
-El proyecto puede ejecutarse localmente mediante WampServer o
-visualizarse mediante el sitio web indicado en la documentación.
-
-------------------------------------------------------------------------
-
-## 34. Autores
-
-**Proyecto ABP --- EMERGENCY MESH**
-
-Tecnologías principales:
-
-`HTML5` · `CSS3` · `PHP` · `MySQL` · `Google Fonts`
+**Última actualización:** 15 de agosto de 2026  
+**Versión:** 1.0  
+**Estado:** ✅ Completo y documentado
