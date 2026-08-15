@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', cursive;
+}
+
+body {
+    background-color: #0b1718;
+}
+
+.servicio img {
+    max-width: 700px;
+    border: 10px solid black;
+}
+.tarjeta {
+    background-color: #122425;
+    font-size: 30px;
+    color: #a7f3d0;
+    height: 330px;
+    width: 800px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 30px;
+}
+.tarjeta p {
+    padding: 20px;
+}
+.inicio2 img {
+    margin-top: 50px;
+    max-width: 400px;
+    border: 20px solid #122425;
+    border-radius: 10px;
+}
+.inicio img {
+    margin-top: 50px;
+    max-width: 900px;
+    border: 20px solid #122425;
+    border-radius: 10px;
+}
+.fuente_pequeña {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    min-height: 160px;
+    padding: 20px 40px;
+    color: aqua;
+    font-size: 30px;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.social {
+    border-radius: 50%;
+    max-width: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    min-height: 40px;
+    padding: 8px 24px;
+    background-color: #a7f3d0;
+}
+
+nav a {
+    color: #122425;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    padding: 28px 24px;
+    color: white;
+    text-align: center;
+}
+
+section a {
+    text-decoration: none;
+    color: #00eaff;
+    font-size: 40px;
+}
+
+section a:hover {
+    color: #a7f3d0;
+    font-size: 50px;
+}
+.quien,
+.texto,
+.tabla {
+    padding: 20px;
+    background-color: #0b1718;
+    border-radius: 5px;
+}
+
+.quien {
+    width: 300px;
+}
+
+.inicio h1 {
+    font-size: 110px;
+    line-height: 1;
+}
+
+.inicio .acento {
+    font-size: 120px;
+}
+
+.inicio p {
+    margin-top: 16px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+    gap: 80px;
+    width: 90%;
+}
+
+.quien h1 {
+    font-size: 80px;
+    line-height: 1;
+}
+
+.quien .acento {
+    font-size: 100px;
+}
+
+.acento,
+.marca,
+.titulo {
+    color: aqua;
+}
+
+.texto {
+    width: 400px;
+    min-height: 260px;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.marca {
+    font-size: 105%;
+}
+
+.tabla {
+    width: 900px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.titulo {
+    margin-bottom: 12px;
+    font-size: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    background-color: #122425;
+    color: #00eaff;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 2px solid #0d1819;
+    text-align: center;
+}
+
+th {
+    color: #c6c7c7;
+    background-color: #0d1819;
+}
+
+.servicio {
+    flex-direction: column;
+    gap: 24px;
+}
+
+.servicio h1 {
+    font-size: 60px;
+    line-height: 1;
+}
+
+.robot {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: wheat;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    min-height: 90px;
+    padding: 16px 24px;
+    background-color: #122425;
+    color: white;
+}
+
+footer div {
+    display: grid;
+    gap: 4px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+i {
+    color: cyan;
+}

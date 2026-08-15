@@ -1,0 +1,90 @@
+CREATE DATABASE robot;
+
+USE robot;
+
+CREATE TABLE robot (
+    nombre VARCHAR(20) NOT NULL,
+    precio INT NOT NULL
+);
+
+CREATE TABLE componentes (
+    nombre VARCHAR(60) NOT NULL,
+    cantidad INT NOT NULL,
+    precio_n INT NOT NULL,
+    iva INT NOT NULL,
+    precio_v INT NOT NULL,
+    subtotal INT NOT NULL
+);
+
+INSERT INTO robot VALUES 
+    ('EmergencyBot', 1151601);
+
+INSERT INTO componentes (nombre, cantidad, precio_n, iva, precio_v, subtotal) VALUES
+    ('Motorreductor DC 24V / 500W', 1, 305373, 58021, 363394, 363394),
+    ('Oruga de caucho reforzada', 1, 595000, 113050, 708050, 708050),
+    ('Rueda motriz', 1, 60000, 11400, 71400, 71400),
+    ('Rueda tensora', 1, 71400, 13566, 84966, 84966),
+    ('Eje de acero 20mm SAE 1045', 1, 120000, 22800, 142800, 142800),
+    ('Rodamiento sellado SKF/equivalente', 1, 22800, 4332, 27132, 27132),
+    ('Suspensión articulada', 1, 142800, 27132, 169932, 169932),
+    ('Resorte de suspensión', 1, 3070, 583, 3653, 3653),
+    ('Amortiguador', 1, 46000, 8740, 54740, 54740),
+    ('Chasis de aluminio reforzado', 1, 150000, 28500, 178500, 178500),
+    ('Mástil telescópico de aluminio', 1, 90000, 17100, 107100, 107100),
+    ('Pata estabilizadora', 1, 119000, 22610, 141610, 141610),
+    ('Carcasa de policarbonato', 1, 244990, 46523, 291513, 291513),
+    ('Placas de protección de aluminio', 1, 119000, 22610, 141610, 141610),
+    ('Tornillería de alta resistencia', 1, 35700, 6783, 42483, 42483),
+    ('Grasa/lubricante industrial', 1, 21420, 4070, 25490, 25490),
+    ('Batería LiFePO4 25.6V / 50Ah', 1, 169003, 32111, 201114, 201114),
+    ('BMS', 1, 25000, 4750, 29750, 29750),
+    ('Cargador LiFePO4 29.2V', 1, 70000, 13300, 83300, 83300),
+    ('Panel solar monocristalino 100W', 1, 38500, 7315, 45815, 45815),
+    ('Controlador solar MPPT Victron/SMA', 1, 146200, 27778, 173978, 173978),
+    ('Fusible principal MEGA/ANL', 1, 8000, 1520, 9520, 9520),
+    ('Fusibles secundarios', 1, 22000, 4180, 26180, 26180),
+    ('Portafusibles', 1, 15000, 2850, 17850, 17850),
+    ('Interruptor principal', 1, 15000, 2850, 17850, 17850),
+    ('Botón de emergencia E-STOP', 1, 3762, 714, 4476, 4476),
+    ('Convertidor DC-DC 24V -> 5/15V', 1, 64448, 12245, 76693, 76693),
+    ('Driver de motor BTS7960', 1, 19600, 3724, 23324, 23324),
+    ('Barra de distribución', 1, 15000, 2850, 17850, 17850),
+    ('Caja eléctrica IP65', 1, 35000, 6650, 41650, 41650),
+    ('Cable de potencia 12 AWG', 1, 9970, 1894, 11864, 11864),
+    ('Cable de señal', 1, 15000, 2850, 17850, 17850),
+    ('Conector XT60', 1, 6000, 1140, 7140, 7140),
+    ('Prensaestopas IP67', 1, 15000, 2850, 17850, 17850),
+    ('Terminales/conectores', 1, 15000, 2850, 17850, 17850),
+    ('Canaletas', 1, 20000, 3800, 23800, 23800),
+    ('Sellos y juntas', 1, 23800, 4522, 28322, 28322),
+    ('ESP32 DevKit V1', 1, 8000, 1520, 9520, 9520),
+    ('ESP32-CAM OV2640', 1, 2500, 475, 2975, 2975),
+    ('GPS u-blox NEO-6M', 1, 7990, 1518, 9508, 9508),
+    ('Sensor ultrasónico HC-SR04', 1, 6000, 1140, 7140, 7140),
+    ('MPU6050 GY-521', 1, 4000, 760, 4760, 4760),
+    ('BME280', 1, 8650, 1644, 10294, 10294),
+    ('Sensor de gases MQ-2', 1, 2290, 435, 2725, 2725),
+    ('Sensor de calidad de aire MQ-135', 1, 4300, 817, 5117, 5117),
+    ('INA219', 1, 5950, 1130, 7080, 7080),
+    ('Encoder incremental industrial', 1, 24000, 4560, 28560, 28560),
+    ('Final de carrera Omron/equivalente', 1, 10000, 1900, 11900, 11900),
+    ('RTC DS3231', 1, 4000, 760, 4760, 4760),
+    ('MicroSD + módulo', 1, 6000, 1140, 7140, 7140),
+    ('LED de señalización', 1, 5000, 950, 5950, 5950),
+    ('Sirena 24V', 1, 5000, 950, 5950, 5950),
+    ('Buzzer 5V', 1, 2000, 380, 2380, 2380),
+    ('Módulo LoRa EBYTE E22-900T30D', 1, 19350, 3677, 23027, 23027),
+    ('Antena LoRa 915 MHz, 5 dBi', 1, 30000, 5700, 35700, 35700),
+    ('Cable coaxial RG58', 1, 10000, 1900, 11900, 11900),
+    ('Conector SMA', 1, 8000, 1520, 9520, 9520),
+    ('Router 4G Teltonika RUT200', 1, 143900, 27341, 171241, 171241),
+    ('Antena 4G', 1, 80000, 15200, 95200, 95200),
+    ('Switch Ethernet industrial 5 puertos', 1, 80000, 15200, 95200, 95200),
+    ('Cable Ethernet Cat5', 1, 15000, 2850, 17850, 17850),
+    ('Gateway Raspberry Pi 4/equivalente', 1, 100000, 19000, 119000, 119000),
+    ('SIM de datos', 1, 120000, 22800, 142800, 142800),
+    ('Router Cisco para laboratorio', 1, 120000, 22800, 142800, 142800),
+    ('Switch administrable Qsco', 1, 100000, 19000, 119000, 119000),
+    ('PC/Notebook servidor', 1, 200000, 38000, 238000, 238000),
+    ('Cable Ethernet adicional 1', 1, 40000, 7600, 47600, 47600),
+    ('Access Point 1', 1, 47600, 9044, 56644, 56644);
